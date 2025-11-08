@@ -1,3 +1,5 @@
+//import React from "react";
+
 // ACCOUNT
 const username = document.querySelector('#userField');
 const email = document.querySelector('#emailField');
@@ -14,13 +16,14 @@ loginSubmitBtn.addEventListener('click', async function () {
     };
 
     await fetch('/users', account);
+    loginSubmitBtn.textContent = "Logout";
 });
 
 // DRIVER FORM
 const carType = document.querySelector('#carType');
 const destination = document.querySelector('#destination');
 const numOfSeats = document.querySelector('#numOfSeats');
-const time = document.querySelector("#timeOfDepart")
+const time = document.querySelector("#timeOfDepart");
 
 const driverSubmitBtn = document.querySelector('#submitEventBtn');
 driverSubmitBtn.addEventListener('click', async function () {
@@ -33,6 +36,7 @@ driverSubmitBtn.addEventListener('click', async function () {
     };
 
     await fetch('/users', event);
+    driverSubmitBtn.textContent = "Exit trip";
 });
 
 // GET PREV EVENTS (in progress)
