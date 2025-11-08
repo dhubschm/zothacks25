@@ -27,6 +27,10 @@ input {
     margin-right: 10px;
 }
 
+h2{
+    font-size: 100pt;
+}
+
 
 
 /* You can target elements by class as well by preceding the class name with . */
@@ -39,6 +43,10 @@ input {
 .text h4 {
     color: greenyellow;
     font-style: italic;
+}
+
+.centerTitle {
+    justify-content: center;
 }
 .app_title {
     color: black;
