@@ -2,11 +2,12 @@
 ul {
     background-color: plum;
 }
-
 ol {
     background-color: goldenrod;
 }
-
+html{
+    background-color: lightgray;
+}
 table,
 th,
 td {
@@ -40,8 +41,16 @@ input {
     font-family: 'monospace';
     display: flex;
     justify-content: space-between;
+    padding: 50px;
 }
-
+.line {
+    transform: translateY(-55px);
+    height:0px;
+    width:100%;
+    border-width: 5px;
+    border:solid;
+    border-color: black;
+}
 .eventCreator {
     border-width: 5px;
     border-color: black;
@@ -51,6 +60,13 @@ input {
     width: 250px;
 }
 
+.bckg{
+    background-image:url("https://www.publicdomainpictures.net/pictures/10000/velka/2527-1272561924UV5a.jpg");
+    height:100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .eventcontainer {
     border-color: black;
     border:solid;
@@ -87,7 +103,7 @@ input {
     display:block;
 }
 
-#exampleFormBtn {
+#loginButton {
     background-color: #008cba;
     color: white;
     border-color: white;
@@ -99,7 +115,7 @@ input {
     For buttons, you can style them differently based on if the mouse is hovering over them or not.
     This can be done using :hover after the button name.
 */
-#exampleFormBtn:hover {
+#loginButton:hover {
     background-color: white;
     color: #008cba;
     border-color: #008cba;
