@@ -2,29 +2,99 @@
 ul {
     background-color: plum;
 }
-
 ol {
     background-color: goldenrod;
 }
-
-table,
+html{
+    background-color: lightgray;
+}
+table{
+    transform: translateX(18%);
+    width:80%;
+    object-fit: contain;
+}
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid transparent;
     padding: 5px;
     border-collapse: collapse;
 }
+
+input {
+    border-radius:5px;
+    height:20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h2{
+    font-size: 100pt;
+}
+
+
 
 /* You can target elements by class as well by preceding the class name with . */
 .text {
     background-color: violet;
     color: white;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: monospace;
 }
 
 .text h4 {
     color: greenyellow;
     font-style: italic;
+}
+
+.centerTitle {
+    justify-content: center;
+}
+.app_title {
+    color: black;
+    font-family: 'monospace';
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom:50px;
+}
+.line {
+    transform: translateY(-55px);
+    height:0px;
+    width:100%;
+    border-width: 5px;
+    border:solid;
+    border-color: black;
+}
+.eventCreator {
+    border-width: 5px;
+    border-color: black;
+    border-radius: 5px;
+    border: solid;
+    padding: 10px;
+    width: 250px;
+}
+
+.bckg{
+    background-image:url("https://www.publicdomainpictures.net/pictures/10000/velka/2527-1272561924UV5a.jpg");
+    height:100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.eventcontainer {
+    border-color: black;
+    border:solid;
+    border-width: 5px;
+    height:350px;
+    width: 225px;
+    border-radius: 5px;
+    padding:10px;
+    background-color: lightgray;
+}
+
+.eventdisplay{
+    border-width:0px;
+    border-color:transparent;
 }
 
 .list-box {
@@ -33,26 +103,39 @@ td {
     align-items: center;
 }
 
+.headerstuff {
+    display: flex;
+    justify-content: right;
+
+}
+
 /* You can target elements by id by preceding the id name with # */
 #greeting {
     color: darkblue;
 }
 
-#exampleFormBtn {
-    background-color: #008cba;
-    color: white;
+#submitEventBtn {
+    display:block;
+}
+
+#loginButton {
+    background-color: rgb(255, 255, 255);
+    color: black;
     border-color: white;
     border-radius: 10px;
+    height: 30px;
+    width: 50px;
     transition-duration: 0.4s;
+    margin-right: 20px;
 }
 
 /*
     For buttons, you can style them differently based on if the mouse is hovering over them or not.
     This can be done using :hover after the button name.
 */
-#exampleFormBtn:hover {
-    background-color: white;
-    color: #008cba;
+#loginButton:hover {
+    background-color: rgb(96, 96, 96);
+    color: #ffffff;
     border-color: #008cba;
     border-radius: 10px;
 }
@@ -111,3 +194,4 @@ td {
         transform: rotate(360deg);
     }
 }
+
