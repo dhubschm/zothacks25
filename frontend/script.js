@@ -1,9 +1,36 @@
-// Get the value of the name input from the form and update the greeting
+// ACCOUNT
+const username = document.querySelector('#userField');
+const email = document.querySelector('#emailField');
 
-const greetingText = document.querySelector("#greeting"); // get greeting element
-const inputElement = document.querySelector("#exampleFormControlInput1"); // get input element
-const btn = document.querySelector("#exampleFormBtn"); // get the element with id = 'exampleFormBtn'
-btn.addEventListener("click", function () {
-    // add an event to the button: whenever the button is pressed, update the greeting name
-    greetingText.innerHTML = `Hello, ${inputElement.value}`; // this is a templated string in Javscript! https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+const loginSubmitBtn = document.querySelector('#loginButton'); //uh... id may change
+
+loginSubmitBtn.addEventListener('click', function () {
+    const account = {
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({username, email})
+    };
+
+    fetch('/users', account);
+});
+
+// DRIVER FORM
+const carType = document.querySelector('#carType');
+const destination = document.querySelector('#destination');
+const numOfSeats = document.querySelector('#numOfSeats');
+const time = document.querySelector("#timeOfDepart")
+
+const driverSubmitBtn = document.querySelector('#submitEventBtn');  //id probably wont change but be prepared
+driverSubmitBtn.addEventListener('click', function () {
+    const event = {
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({carType, destination, numOfSeats, time})
+    };
+
+    fetch('/users', event);
 });
