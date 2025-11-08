@@ -1,9 +1,49 @@
-// Get the value of the name input from the form and update the greeting
+// ACCOUNT
+const username = document.querySelector('#userField');
+const email = document.querySelector('#emailField');
 
-const greetingText = document.querySelector("#greeting"); // get greeting element
-const inputElement = document.querySelector("#exampleFormControlInput1"); // get input element
-const btn = document.querySelector("#exampleFormBtn"); // get the element with id = 'exampleFormBtn'
-btn.addEventListener("click", function () {
-    // add an event to the button: whenever the button is pressed, update the greeting name
-    greetingText.innerHTML = `Hello, ${inputElement.value}`; // this is a templated string in Javscript! https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+const loginSubmitBtn = document.querySelector('#loginButton');
+
+loginSubmitBtn.addEventListener('click', async function () {
+    const account = {
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({username, email})
+    };
+
+    await fetch('/users', account);
 });
+
+// DRIVER FORM
+const carType = document.querySelector('#carType');
+const destination = document.querySelector('#destination');
+const numOfSeats = document.querySelector('#numOfSeats');
+const time = document.querySelector("#timeOfDepart")
+
+const driverSubmitBtn = document.querySelector('#submitEventBtn');
+driverSubmitBtn.addEventListener('click', async function () {
+    const event = {
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({carType, destination, numOfSeats, time})
+    };
+
+    await fetch('/users', event);
+});
+
+// GET PREV EVENTS (in progress)
+
+/*
+async function updateEvents() {
+    const events = (await fetch('/users/events')).json();
+}
+    */
+
+// For each class="eventcontainer", need to change eventnameX, eventdestX, departtimeX, seatsremX
+// Fetch event list from FastAPI in route "/users/events" (it has limit parameter)
+
+// Can also get specific event
