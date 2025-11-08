@@ -10,21 +10,61 @@ ol {
 table,
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid transparent;
     padding: 5px;
     border-collapse: collapse;
 }
+
+input {
+    border-radius:5px;
+    height:20px;
+}
+
+
 
 /* You can target elements by class as well by preceding the class name with . */
 .text {
     background-color: violet;
     color: white;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: monospace;
 }
 
 .text h4 {
     color: greenyellow;
     font-style: italic;
+}
+.app_title {
+    color: black;
+    font-family: 'monospace';
+    display: flex;
+    justify-content: right;
+}
+
+.eventCreator {
+    border-width: 5px;
+    border-color: black;
+    border-radius: 5px;
+    border: solid;
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.eventcontainer {
+    border-color: black;
+    border:solid;
+    border-width: 5px;
+    height:350px;
+    width: 225px;
+    border-radius: 5px;
+}
+
+.eventdisplay{
+    border-width:0px;
+    border-color:transparent;
 }
 
 .list-box {
@@ -33,9 +73,19 @@ td {
     align-items: center;
 }
 
+.headerstuff {
+    display: flex;
+    justify-content: right;
+
+}
+
 /* You can target elements by id by preceding the id name with # */
 #greeting {
     color: darkblue;
+}
+
+#submitEventBtn {
+    display:block;
 }
 
 #exampleFormBtn {

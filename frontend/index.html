@@ -27,31 +27,47 @@
             Here, we have a greeting initially called "Hello, world". However, using JS, you can
             change the greeting to a custom input by clicking the button.
         -->
-            <h1 id="greeting">Hello, world!</h1>
             <div>
-                <div>
-                    <label for="exampleFormControlInput1" class="form-label"
-                        >What is your name?</label
-                    >
-                    <input
-                        id="exampleFormControlInput1"
-                        placeholder="Peter the Anteater"
-                    />
+            <h1 class="app_title">App Title
+                <div class="headerstuff">
+                <input
+                    id="userField"
+                    placeholder="Enter Username"
+                />
+                <input
+                    id="emailField"
+                    placeholder="Enter Email"
+                />
+                <button type="submit" id="exampleFormBtn">Login</button>
                 </div>
-                <button type="submit" id="exampleFormBtn">Submit</button>
+            </h1>
             </div>
             <br />
+            
 
+            <!--This is place to create event-->
+            <div class="eventCreator">
+                <br />
+                Event Creator
+                <br />
+                <br />
+                <input id="carType" placeholder="Enter Car">
+                <br />
+                <input id="destination" placeholder="Enter Destination">
+                <br />
+                <input id="numOfSeats" placeholder="Num of Passengers">
+                <button type = "submit" id="submitEventBtn">Submit</button>
+            </div>
             <!-- Texts in HTML -->
             <!-- 
             There are diffent types of text elements, but the most common ones are header, paragraph, and anchor elements.
             Headers go from h1 to h6, paragraph elements (p) are simply normal text, and anchor elements (a) are links
             that can wrap around other elements (text and images) and link to another site using the href attribute.
         -->
+            <!--
             <div class="text">
                 <h1>
-                    Let's take a look at some simple texts. This is an example
-                    of a header.
+                    Choose your Ride
                 </h1>
                 <h2>This is a subheader.</h2>
                 <h3>This is a subsubheader and this repeats until h6.</h3>
@@ -73,13 +89,55 @@
                 </h4>
             </div>
             <h4>But not here, even though they're both h4 headers.</h4>
-
+        -->
             <!-- Lists in HTML -->
             <!-- 
             There are two types of lists, unordered (ul) and ordered (ol). Unordered lists have list
             items (li) without any specific order given to them like bullet points, whereas ordered lists
             have their list items ordered/numbered. 
         -->
+
+            <!--This is the event container-->
+
+            <table class>
+                <tr class>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname"> </p></p>
+                            <p>This is temp text</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname"> </p></p>
+                            <p>This is temp text</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname"> </p></p>
+                            <p>This is temp text</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ICS 31</td>
+                    <td>Introduction to Programming</td>
+                    <td>Alfaro</td>
+                </tr>
+                <tr>
+                    <td>ICS 31</td>
+                    <td>Introduction to Programming</td>
+                    <td>Alfaro</td>
+                </tr>
+            <table>
+
             <div class="lists">
                 <h2>Lists</h2>
                 <p>
