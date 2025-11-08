@@ -18,6 +18,8 @@ td {
 input {
     border-radius:5px;
     height:20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -37,7 +39,7 @@ input {
     color: black;
     font-family: 'monospace';
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
 }
 
 .eventCreator {
@@ -47,10 +49,6 @@ input {
     border: solid;
     padding: 10px;
     width: 250px;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .eventcontainer {
@@ -60,6 +58,7 @@ input {
     height:350px;
     width: 225px;
     border-radius: 5px;
+    padding:10px;
 }
 
 .eventdisplay{

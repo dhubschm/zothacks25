@@ -47,15 +47,13 @@
 
             <!--This is place to create event-->
             <div class="eventCreator">
-                <br />
-                Event Creator
-                <br />
-                <br />
-                <input id="carType" placeholder="Enter Car">
-                <br />
-                <input id="destination" placeholder="Enter Destination">
-                <br />
-                <input id="numOfSeats" placeholder="Num of Passengers">
+                <fieldset>
+                    <legend>Event Creator</legend>
+                    <input id="carType" placeholder="Enter Car"><br>
+                    <input id="destination" placeholder="Enter Destination"><br>
+                    <input id="numOfSeats" placeholder="Num of Passengers"><br>
+                    <input id="timeOfDepart" placeholder="Time of Departure"><br>
+                </fieldset>
                 <button type = "submit" id="submitEventBtn">Submit</button>
             </div>
             <!-- Texts in HTML -->
@@ -98,46 +96,107 @@
         -->
 
             <!--This is the event container-->
-
-            <table class>
-                <tr class>
+            <table>
+                <tr>
                     <td>
                         <div>
                             <div class="eventcontainer">
-                            Event:<p id="eventname"> </p></p>
-                            <p>This is temp text</p>
+                            Event:<p id="eventname1"> </p>
+                            Destination: <p id="eventdest1"></p>
+                            Departure Time: <p id="departtime1"></p>
+                            Number of Remaining Seats: <p id="seatsrem1"></p>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div>
                             <div class="eventcontainer">
-                            Event:<p id="eventname"> </p></p>
-                            <p>This is temp text</p>
+                            Event:<p id="eventname2"> </p>
+                            Destination: <p id="eventdest2"></p>
+                            Departure Time: <p id="departtime2"></p>
+                            Number of Remaining Seats: <p id="seatsrem2"></p>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div>
                             <div class="eventcontainer">
-                            Event:<p id="eventname"> </p></p>
-                            <p>This is temp text</p>
+                            Event:<p id="eventname3"> </p>
+                            Destination: <p id="eventdest3"></p>
+                            Departure Time: <p id="departtime3"></p>
+                            Number of Remaining Seats: <p id="seatsrem3"></p>
                             </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>ICS 31</td>
-                    <td>Introduction to Programming</td>
-                    <td>Alfaro</td>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname4"> </p>
+                            Destination: <p id="eventdest4"></p>
+                            Departure Time: <p id="departtime4"></p>
+                            Number of Remaining Seats: <p id="seatsrem4"></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname5"> </p>
+                            Destination: <p id="eventdest5"></p>
+                            Departure Time: <p id="departtime5"></p>
+                            Number of Remaining Seats: <p id="seatsrem5"></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname6"> </p>
+                            Destination: <p id="eventdest6"></p>
+                            Departure Time: <p id="departtime6"></p>
+                            Number of Remaining Seats: <p id="seatsrem6"></p>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>ICS 31</td>
-                    <td>Introduction to Programming</td>
-                    <td>Alfaro</td>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname7"> </p>
+                            Destination: <p id="eventdest7"></p>
+                            Departure Time: <p id="departtime7"></p>
+                            Number of Remaining Seats: <p id="seatsrem7"></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname8"> </p>
+                            Destination: <p id="eventdest8"></p>
+                            Departure Time: <p id="departtime8"></p>
+                            Number of Remaining Seats: <p id="seatsrem8"></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <div class="eventcontainer">
+                            Event:<p id="eventname9"> </p>
+                            Destination: <p id="eventdest9"></p>
+                            Departure Time: <p id="departtime9"></p>
+                            Number of Remaining Seats: <p id="seatsrem9"></p>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
             <table>
 
+
+            <!--
             <div class="lists">
                 <h2>Lists</h2>
                 <p>
@@ -207,8 +266,9 @@
                     </div>
                 </div>
             </div>
-
+        -->
             <!-- Tables in HTML -->
+             <!--
             <h2>Tables</h2>
             <p>
                 You can also create tables in HTML. Within a table element
@@ -264,7 +324,7 @@
                     <td>Wong-ma, Harris</td>
                 </tr>
             </table>
-
+        -->
             <!-- The Box Model -->
             <!-- 
             This is an interactive playground for you to have fun with CSS's box model (although you 
@@ -274,6 +334,7 @@
             takes in the src, which is the link to the image, and the alt, alternative text if the 
             image fails to load. It is good practice for all img elements to have an alt.
         -->
+            <!--
             <h2>The Box Model</h2>
             <img
                 src="box_model.PNG"
@@ -291,7 +352,7 @@
                 <p id="content1">This is the content.</p>
                 <p id="content2">This is also content.</p>
             </div>
-
+        -->
             <!-- Animation is Hard -->
             <!-- 
             Animation is hard, go to styles.css for a brief explanation.
@@ -302,7 +363,6 @@
                 ><img id="petr" src="petr.png" alt="petr"
             /></a>
         </div>
-
         <!-- Load scripts at the end of your HTML to make pages load faster! -->
         <script src="script.js"></script>
     </body>
