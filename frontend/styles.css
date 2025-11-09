@@ -9,7 +9,7 @@ html{
     background-color: lightgray;
 }
 table{
-    transform: translateX(18%);
+    transform: translateX(9%);
     width:80%;
     object-fit: contain;
 }
@@ -65,13 +65,52 @@ h2{
     border:solid;
     border-color: black;
 }
+
+.eventCreator_background {
+    background-color: rgb(16, 16, 16);
+    opacity: 100%;
+    height:100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: flex;
+    top: 0;
+    left: 0;
+    
+}
+
+
+fieldset {
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px
+}
+
 .eventCreator {
     border-width: 5px;
-    border-color: black;
+    border-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
-    border: solid;
+    border: None;
     padding: 10px;
-    width: 250px;
+    width: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+
+.eventCreator fieldset legend{
+    color: white;           /* White text for contrast */
+    font-weight: bold;      /* Make it stand out */     /* Add space around the text */
+    border-radius: 5px;     /* Match the container's rounded corners */
+    text-transform: uppercase; /* Make it look official */
+    font-size: 3em;
+    text-align:center;
+    border: None;
+    
 }
 
 .bckg{
@@ -86,10 +125,12 @@ h2{
     border:solid;
     border-width: 5px;
     height:350px;
-    width: 225px;
+    width: 350px;
     border-radius: 5px;
     padding:10px;
     background-color: lightgray;
+    margin: 10px
+
 }
 
 .eventdisplay{
@@ -127,7 +168,38 @@ h2{
     width: 50px;
     transition-duration: 0.4s;
     margin-right: 20px;
+    margin-right: 20px;
+    margin-bottom: 70px;
+    margin-top: 70px;
+
 }
+
+
+#submitEventBtn {  /* This is the button within event creator */
+
+    width: 90%; 
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: url("https://www.publicdomainpictures.net/pictures/10000/velka/2527-1272561924UV5a.jpg");
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+
+}
+
+#submitEventBtn:hover {
+    background-color: #f1ba91; /* Darker green on hover */
+    font-color: rgb(0, 0, 0);
+}
+
+
+
 
 /*
     For buttons, you can style them differently based on if the mouse is hovering over them or not.
