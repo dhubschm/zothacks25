@@ -27,8 +27,14 @@ class Event(BaseModel):
     Capacity: int = None #change to available seating and decrement it? 
     Attendees: List[User] = []
 
+# Host=Driver(UserInfo=User(Username="foo",Email="bar"),)
 users = [User(Username="foo",Email="bar")]
-events_list = [Event(EventName='a',Host=Driver(UserInfo=User(Username="foo",Email="bar"), Cartype="Car"),Time='c',Location='d',Capacity=1,Attendees=[])]
+events_list = [
+    Event(EventName='Driving with Peter the Anteater', Cartype="Truck", Time='12:00PM',Location='UCI',Capacity=5,Attendees=[User(Username='Swagman', Email='swagman@uci.edu')]),
+    Event(EventName='Bliizard Office Tour', Cartype="Prius", Time='9:00AM',Location='Irvine, CA',Capacity=5,Attendees=[User(Username='Kaladin Stormblessed', Email='honor@uci.edu')]),
+    Event(EventName='Disney Adventures', Cartype="Bus", Time='1:00PM',Location='Universal Studios',Capacity=40,Attendees=[User(Username='Chancy', Email='boo@uci.edu')]),
+    
+]
 
 #Creates a User class and adds it to a list of users
 @app.post("/users/create/")
@@ -44,7 +50,6 @@ async def create_event(eventname: Annotated[str, Form()], destination: Annotated
     events_list.append(new_event)
     redirect_url = f"/static/index.html" ##?#eventcreator&eventname={eventname}&destination={destination}&capacity={capacity}&time={time}"
     return RedirectResponse(url=redirect_url, status_code=303)
-    #return RedirectResponse(url="http://127.0.0.1:8000/static/index.html?#eventcreator", status_code=303)
 
 #Adds a User class to a list of attendees in an Event class
 @app.post("/events/join/{event_id}", response_model=Event)
@@ -67,12 +72,11 @@ def get_event(event_id: int) -> Event:
     else:
         raise HTTPException(status_code=404, detail=f"Event {event_id} not found")
     
-@app.get("/events/", response_model=Event)
-def get_top_event() -> Event:
-    #return events_list[-1]
+@app.get("/events/", response_model=list)
+def get_top_event():
     events = []
     for event in events_list[:9]:
         events.append(
-            event.model_dump(mode='json')
+            event.model_dump(mode='json', warnings=False)
         )
-    return json.dumps(events)
+    return events
