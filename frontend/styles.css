@@ -27,8 +27,9 @@ input {
     margin-right: 10px;
 }
 
-h2{
-    font-size: 100pt;
+a {
+    font-size: 50pt;
+    color: black;
 }
 
 
@@ -46,8 +47,25 @@ h2{
 }
 
 .centerTitle {
+    display:flex;
     justify-content: center;
+    font-size: 100pt;
 }
+
+.subCenterTitle{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10rem;
+    font-size: 50pt;
+}
+
+.inlineTitle {
+    display: inline-flex;
+}
+.imageContainer {
+    margin-left: 15px;
+}
+
 .app_title {
     color: black;
     font-family: 'monospace';
@@ -111,6 +129,18 @@ fieldset {
     text-align:center;
     border: None;
     
+}
+
+.joinbutton {
+    width: 80%;
+    background-color: #008cba;
+    color: white;
+    border-radius: 50px;
+}
+
+.buttonhold{
+    display: flex;
+    justify-content: center;
 }
 
 .bckg{
@@ -205,11 +235,22 @@ fieldset {
     For buttons, you can style them differently based on if the mouse is hovering over them or not.
     This can be done using :hover after the button name.
 */
+a:hover{
+    cursor: pointer;
+    color:rgb(71, 95, 139);
+}
 #loginButton:hover {
     background-color: rgb(96, 96, 96);
     color: #ffffff;
     border-color: #008cba;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.joinbutton:hover {
+    background-color: rgb(49, 110, 131);
+    color:white;
+
 }
 
 /*
@@ -226,6 +267,7 @@ fieldset {
     border: 5px solid black;
     background-color: gray;
 }
+
 
 #content1 {
     background-color: lightcoral;
