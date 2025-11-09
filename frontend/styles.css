@@ -144,6 +144,10 @@ a {
     For buttons, you can style them differently based on if the mouse is hovering over them or not.
     This can be done using :hover after the button name.
 */
+a:hover{
+    cursor: pointer;
+    color:rgb(71, 95, 139);
+}
 #loginButton:hover {
     background-color: rgb(96, 96, 96);
     color: #ffffff;
