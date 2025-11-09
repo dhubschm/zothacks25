@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List
+import json
 
 app = FastAPI()
 
@@ -24,8 +25,8 @@ class Event(BaseModel):
     Capacity: int = None #change to available seating and decrement it? 
     Attendees: List[User] = []
 
-users = []
-events_list = []
+users = [User(Username="foo",Email="bar")]
+events_list = [Event(EventName='a',Host=Driver(UserInfo=User(Username="foo",Email="bar"), Cartype="Car"),Time='c',Location='d',Capacity=1,Attendees=[])]
 
 #Creates a User class and adds it to a list of users
 @app.post("/users/create/", response_model=User)
@@ -59,3 +60,13 @@ def get_event(event_id: int) -> Event:
         return event
     else:
         raise HTTPException(status_code=404, detail=f"Event {event_id} not found")
+    
+@app.get("/events/", response_model=Event)
+def get_top_event() -> Event:
+    #return events_list[-1]
+    events = []
+    for event in events_list[:9]:
+        events.append(
+            event.model_dump(mode='json')
+        )
+    return json.dumps(events)

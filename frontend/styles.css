@@ -141,8 +141,9 @@ fieldset {
 }
 
 .joinbutton {
+    margin-top: 15px;
     width: 80%;
-    background-color: #008cba;
+    background-color: grey;
     color: white;
     border-radius: 50px;
 }
@@ -210,8 +211,8 @@ fieldset {
 }
 
 #loginButton {
-    background-color: rgb(255, 255, 255);
-    color: black;
+    background-color: grey;
+    color: white;
     border-color: white;
     border-radius: 10px;
     height: 30px;
@@ -257,7 +258,7 @@ a:hover{
     color:rgb(71, 95, 139);
 }
 #loginButton:hover {
-    background-color: rgb(96, 96, 96);
+    background-color: darkslategray;
     color: #ffffff;
     border-color: #008cba;
     border-radius: 10px;
@@ -265,11 +266,15 @@ a:hover{
 }
 
 .joinbutton:hover {
-    background-color: rgb(49, 110, 131);
+    background-color: darkslategray;
     color:white;
 
 }
 
+.navbutton:hover {
+    background-color: darkslategray;
+    color:white;
+}
 
 /*
     Feel free to mess around with the padding, border and margin here
@@ -331,4 +336,3 @@ a:hover{
         transform: rotate(360deg);
     }
 }
-
