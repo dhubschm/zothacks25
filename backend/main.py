@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List
 
@@ -7,6 +8,9 @@ app = FastAPI()
 class User(BaseModel):
     Email: str = None
     Username: str = None
+
+#app.mount("/static", StaticFiles(directory="../frontend"), name="static")
+app.mount("/static", StaticFiles(directory="../frontend"), name="static")
 
 class Driver(BaseModel):
     UserInfo: User = None #Inherits User information (Email and Username)
@@ -30,7 +34,7 @@ def create_user(new_user: User):
     return new_user
 
 #Creates an Event class and adds it to a list of events
-@app.post("/event/postevent/", response_model=Event)
+@app.post("/event/makeevent/", response_model=Event)
 def create_event(new_event: Event):
     events_list.append(new_event)
     return new_event
@@ -48,7 +52,7 @@ def join_event(event_id: int, attendee: User):  #implement size handling?
         raise HTTPException(status_code=503, detail=f"Event capacity for {event_id} is full")
     
 #Retrieves a particular event in a list of events
-@app.get("/events/viewevent/event_id}", response_model=Event)
+@app.get("/events/viewevent/{event_id}", response_model=Event)
 def get_event(event_id: int) -> Event:
     if event_id < len(events_list):
         event = events_list[event_id]
