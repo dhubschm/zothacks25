@@ -1,6 +1,10 @@
 //import React from "react";
 
 // ACCOUNT
+
+
+
+/*
 const username = document.querySelector("#userField");
 const email = document.querySelector("#emailField");
 
@@ -22,7 +26,7 @@ driverSubmitBtn.addEventListener("click", function () {
 });
 
 // GET PREV EVENTS (in progress)
-
+*/
 /*
 function updateEvents() {
     const events = new XMLHttpRequest();

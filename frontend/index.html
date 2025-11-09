@@ -19,31 +19,28 @@
 <body>
     <div class="container">
         <div>
-            <h1 class="app_title"><div class="inlineTitle">AntPile
-                    <div class="imageContainer">
+            <h1 class="app_title"><div>AntPile
                     <img src="https://i.redd.it/rgfi4exvjiq11.png" height="50px">
-                    <img src="https://freesvg.org/img/nicubunu_Toy_car.png" height="50px"></div></div>
+                    <img src="https://freesvg.org/img/nicubunu_Toy_car.png" height="50px"> </div>
                 
                 <div class="headerstuff">
-                    <form id="usercreator" target="/users">
-                        <input id="userField" placeholder="Enter Username" />
-                        <input id="emailField" placeholder="Enter Email" />
-                        <button type="submit" id="loginButton">Login</button>
+                    <form target="/users">
+                    <input id="userField" placeholder="Enter Username" />
+                    <input id="emailField" placeholder="Enter Email" />
+                    <button type="submit" id="loginButton">Login</button>
                     </form>
                 </div>
             </h1>
             <div class="line"></div>
         </div>
-        <div>
+        <br />
+        <div class="centerSubTitle">
             <p class="centerTitle">AntPile</p>
             <div class="subCenterTitle">
                 <a href="#eventcreator">Start Ride</a>
-                <a href="#eventcontainstart">Join Ride</a>
+                <a href="#eventContainer">Join Ride</a>
             </div>
         </div>
-        <div class="line" id="eventcontainstart"></div>
-
-        <div><p class="subCenterTitle">Join Ride</p></div>
 
         <!--This is the event container-->
         <table>
@@ -55,7 +52,7 @@
                             Destination: <p id="eventdest1"></p>
                             Departure Time: <p id="departtime1"></p>
                             Number of Remaining Seats: <p id="seatsrem1"></p>
-                            <div class="buttonhold"><button id="joinbut1" type="button" class="joinbutton">Join Trip</button><div>
+                            <button>Join Trip</button>
                         </div>
                     </div>
                 </td>
@@ -66,7 +63,6 @@
                             Destination: <p id="eventdest2"></p>
                             Departure Time: <p id="departtime2"></p>
                             Number of Remaining Seats: <p id="seatsrem2"></p>
-                            <div class="buttonhold"><button id="joinbut2" type="button" class="joinbutton">Join Trip</button><div></div>
                         </div>
                     </div>
                 </td>
@@ -77,7 +73,6 @@
                             Destination: <p id="eventdest3"></p>
                             Departure Time: <p id="departtime3"></p>
                             Number of Remaining Seats: <p id="seatsrem3"></p>
-                            <div class="buttonhold"><button id="joinbut3" type="button" class="joinbutton">Join Trip</button><div></div>
                         </div>
                     </div>
                 </td>
@@ -90,7 +85,6 @@
                             Destination: <p id="eventdest4"></p>
                             Departure Time: <p id="departtime4"></p>
                             Number of Remaining Seats: <p id="seatsrem4"></p>
-                            <div class="buttonhold"><button id="joinbut4" type="button" class="joinbutton">Join Trip</button><div></div>
                         </div>
                     </div>
                 </td>
@@ -101,7 +95,6 @@
                             Destination: <p id="eventdest5"></p>
                             Departure Time: <p id="departtime5"></p>
                             Number of Remaining Seats: <p id="seatsrem5"></p>
-                            <div class="buttonhold"><button id="joinbut5" type="button" class="joinbutton">Join Trip</button><div></div>
                         </div>
                     </div>
                 </td>
@@ -112,7 +105,6 @@
                             Destination: <p id="eventdest6"></p>
                             Departure Time: <p id="departtime6"></p>
                             Number of Remaining Seats: <p id="seatsrem6"></p>
-                            <div class="buttonhold"><button id="joinbut6" type="button" class="joinbutton">Join Trip</button><div></div>
                         </div>
                     </div>
                 </td>
@@ -125,7 +117,6 @@
                             Destination: <p id="eventdest7"></p>
                             Departure Time: <p id="departtime7"></p>
                             Number of Remaining Seats: <p id="seatsrem7"></p>
-                            <div class="buttonhold"><button id="joinbut7" type="button" class="joinbutton">Join Trip</button><div></div>
                         </div>
                     </div>
                 </td>
@@ -136,7 +127,6 @@
                             Destination: <p id="eventdest8"></p>
                             Departure Time: <p id="departtime8"></p>
                             Number of Remaining Seats: <p id="seatsrem8"></p>
-                            <div class="buttonhold"><button id="joinbut8" type="button" class="joinbutton">Join Trip</button><div></div>
                         </div>
                     </div>
                 </td>
@@ -147,16 +137,13 @@
                             Destination: <p id="eventdest9"></p>
                             Departure Time: <p id="departtime9"></p>
                             Number of Remaining Seats: <p id="seatsrem9"></p>
-                            <div class="buttonhold"><button id="joinbut9" type="button" class="joinbutton">Join Trip</button><div></div>
                         </div>
                     </div>
                 </td>
             </tr>
             <table>
-
-            
                 <!--This is place to create event-->
-                <form id="eventcreator" target="/users/events">
+                <form class="eventCreator" id="eventcreator" target="/users/events">
                     <fieldset>
                         <legend>Event Creator</legend>
                         <input id="carType" placeholder="Enter Car"><br>
@@ -166,6 +153,7 @@
                     </fieldset>
                     <button type="submit" id="submitEventBtn">Submit</button>
                 </form>
+
     </div>
 
     <!-- Load scripts at the end of your HTML to make pages load faster! -->
