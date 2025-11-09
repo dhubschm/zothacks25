@@ -59,6 +59,12 @@ a {
     font-size: 50pt;
 }
 
+.inlineTitle {
+    display: inline-flex;
+}
+.imageContainer {
+    margin-left: 15px;
+}
 
 .app_title {
     color: black;
@@ -189,6 +195,7 @@ a:hover{
     border: 5px solid black;
     background-color: gray;
 }
+
 
 #content1 {
     background-color: lightcoral;
