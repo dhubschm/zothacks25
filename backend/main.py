@@ -8,14 +8,10 @@ from typing import Annotated
 
 app = FastAPI()
 
-#app.mount("/static", StaticFiles(directory="../frontend"), name="static")
-app.mount("/static", StaticFiles(directory="../frontend"), name="static")
-
 class User(BaseModel):
     Email: str = None
     Username: str = None
 
-#app.mount("/static", StaticFiles(directory="../frontend"), name="static")c
 app.mount("/static", StaticFiles(directory="../frontend"), name="static")
 
 class Driver(BaseModel):

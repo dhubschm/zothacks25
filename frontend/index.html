@@ -144,32 +144,6 @@
         <div>
             <p id="startride" class="subCenterTitle">Start Ride</p>
         </div>
-        <!--This is place to create event-->
-
-        <div class="eventCreator_background">
-            <form id="eventcreator" target="/users/events">
-                <fieldset>
-                    <legend id="legend1">Event Creator</legend>
-                    <input id="carType" class='eventCreator_button' placeholder="Enter Car"><br>
-                    <input id="destination" class='eventCreator_button' placeholder="Enter Destination"><br>
-                    <input id="numOfSeats" class='eventCreator_button' placeholder="Num of Passengers"><br>
-                    <input id="timeOfDepart" class='eventCreator_button' placeholder="Time of Departure"><br>
-                </fieldset>
-                <button type="submit" id="submitEventBtn">Submit</button>
-            </form>
-        </div>
-
-
-        <div class="ZotGPT">
-            <h1 style="font-size:70px; text-align:center; padding-top:65px">AntPile Bot</h1>
-            <p style="padding-top:20px; font-size: 30px; text-align:center;">Want to find out where is the nearest
-                pick-up spot? Ask Peter the ride bot!</p>
-            <a href="https://creator.zotgpt.uci.edu/mychatbots/fT7F7jLVbldcmKhUazHsAoJg7pk5fUfNl6DX/chat"
-                class="ZotGPT_askpeter"> Ask Peter -></a>
-            <img src="./peter.png" style="float:right; margin-right:80px; margin-top:25px" height="400px">
-
-
-        </div>
 
         <!--This is place to create event-->
         <form id="eventcreator" action="/event/makeevent/" method="POST">
@@ -182,6 +156,18 @@
             </fieldset>
             <button type="submit" id="submitEventBtn">Submit</button>
         </form>
+
+
+        <div class="ZotGPT">
+            <h1 style="font-size:70px; text-align:center; padding-top:65px">AntPile Bot</h1>
+            <p style="padding-top:20px; font-size: 30px; text-align:center;">Want to find out where is the nearest
+                pick-up spot? Ask Peter the ride bot!</p>
+            <a href="https://creator.zotgpt.uci.edu/mychatbots/fT7F7jLVbldcmKhUazHsAoJg7pk5fUfNl6DX/chat"
+                class="ZotGPT_askpeter"> Ask Peter -></a>
+            <img src="./peter.png" style="float:right; margin-right:80px; margin-top:25px" height="400px">
+
+
+        </div>
     </div>
     <!-- Load scripts at the end of your HTML to make pages load faster! -->
     <script src="script.js"></script>
