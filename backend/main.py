@@ -1,8 +1,12 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List
 
 app = FastAPI()
+
+#app.mount("/static", StaticFiles(directory="../frontend"), name="static")
+app.mount("/static", StaticFiles(directory="../frontend"), name="static")
 
 class User(BaseModel):
     Email: str = None
