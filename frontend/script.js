@@ -1,5 +1,5 @@
 function updateEventPreview(containerElement, data) {
-    textElement = containerElement.querySelector('p');
+    textElement = containerElement.querySelector('pre');
     //text = `Event: ${data.EventName}\nDriver Name: ${data.Host.UserInfo.Username}\nDestination: ${data.Time}\nDeparture Time: ${data.Location}\nNumber of Remaining Seats: ${data.Capacity}\nParticipants:${data.Attendees}`;
     pText = '';
     for (participant of data.Attendees) {

@@ -31,7 +31,7 @@ class Event(BaseModel):
 users = [User(Username="foo",Email="bar")]
 events_list = [
     Event(EventName='Driving with Peter the Anteater', Cartype="Truck", Time='12:00PM',Location='UCI',Capacity=5,Attendees=[User(Username='Swagman', Email='swagman@uci.edu')]),
-    Event(EventName='Bliizard Office Tour', Cartype="Prius", Time='9:00AM',Location='Irvine, CA',Capacity=5,Attendees=[User(Username='Kaladin Stormblessed', Email='honor@uci.edu')]),
+    Event(EventName='Bliizard Office Tour', Cartype="Prius", Time='9:00AM',Location='Irvine, CA',Capacity=5,Attendees=[User(Username='Kaladin Stormblessed', Email='None')]),
     Event(EventName='Disney Adventures', Cartype="Bus", Time='1:00PM',Location='Universal Studios',Capacity=40,Attendees=[User(Username='Chancy', Email='boo@uci.edu')]),
     
 ]
