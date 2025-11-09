@@ -1,17 +1,19 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Form
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 from typing import List
+from typing import Annotated
+
 import json
 
 app = FastAPI()
 
-#app.mount("/static", StaticFiles(directory="../frontend"), name="static")
-app.mount("/static", StaticFiles(directory="../frontend"), name="static")
-
 class User(BaseModel):
     Email: str = None
     Username: str = None
+
+app.mount("/static", StaticFiles(directory="../frontend"), name="static")
 
 class Driver(BaseModel):
     UserInfo: User = None #Inherits User information (Email and Username)
@@ -19,7 +21,7 @@ class Driver(BaseModel):
 
 class Event(BaseModel):
     EventName: str = None
-    Host: Driver = None #Inherits Driver information (Userinfo and Cartype)
+    #Host: Driver = None #Inherits Driver information (Userinfo and Cartype)
     Time: str = None
     Location: str = None
     Capacity: int = None #change to available seating and decrement it? 
@@ -29,20 +31,24 @@ users = [User(Username="foo",Email="bar")]
 events_list = [Event(EventName='a',Host=Driver(UserInfo=User(Username="foo",Email="bar"), Cartype="Car"),Time='c',Location='d',Capacity=1,Attendees=[])]
 
 #Creates a User class and adds it to a list of users
-@app.post("/users/create/", response_model=User)
-def create_user(new_user: User):
+@app.post("/users/create/")
+def create_user(username: Annotated[str, Form()], email: Annotated[str, Form()],):
+    new_user = User(Username = username, Email = email)
     users.append(new_user)
-    return new_user
+    return {username: email}
 
 #Creates an Event class and adds it to a list of events
-@app.post("/event/postevent/", response_model=Event)
-def create_event(new_event: Event):
+@app.post("/event/makeevent/", response_class=RedirectResponse)
+async def create_event(eventname: Annotated[str, Form()], destination: Annotated[str, Form()], capacity: Annotated[int, Form()], time: Annotated[str, Form()],):
+    new_event = Event(EventName = eventname, Location = destination, Capacity = capacity, Time = time)
     events_list.append(new_event)
-    return new_event
+    redirect_url = f"/static/index.html" ##?#eventcreator&eventname={eventname}&destination={destination}&capacity={capacity}&time={time}"
+    return RedirectResponse(url=redirect_url, status_code=303)
+    #return RedirectResponse(url="http://127.0.0.1:8000/static/index.html?#eventcreator", status_code=303)
 
 #Adds a User class to a list of attendees in an Event class
 @app.post("/events/join/{event_id}", response_model=Event)
-def join_event(event_id: int, attendee: User):  #implement size handling? 
+def join_event(event_id: int, attendee: User):  
     event = events_list[event_id]
 
     if event.Capacity > 0:
@@ -53,7 +59,7 @@ def join_event(event_id: int, attendee: User):  #implement size handling?
         raise HTTPException(status_code=503, detail=f"Event capacity for {event_id} is full")
     
 #Retrieves a particular event in a list of events
-@app.get("/events/viewevent/event_id}", response_model=Event)
+@app.get("/events/viewevent/{event_id}", response_model=Event)
 def get_event(event_id: int) -> Event:
     if event_id < len(events_list):
         event = events_list[event_id]
