@@ -24,10 +24,10 @@
                     <img src="https://freesvg.org/img/nicubunu_Toy_car.png" height="50px"> </div>
                 
                 <div class="headerstuff">
-                    <form target="/users">
-                    <input id="userField" placeholder="Enter Username" />
-                    <input id="emailField" placeholder="Enter Email" />
-                    <button type="submit" id="loginButton">Login</button>
+                    <form id="usercreator" target="/users">
+                        <input id="userField" placeholder="Enter Username" />
+                        <input id="emailField" placeholder="Enter Email" />
+                        <button type="submit" id="loginButton">Login</button>
                     </form>
                 </div>
             </h1>
@@ -143,7 +143,7 @@
             </tr>
             <table>
                 <!--This is place to create event-->
-                <div class="eventCreator" id="eventcreator">
+                <form id="eventcreator" target="/users/events">
                     <fieldset>
                         <legend>Event Creator</legend>
                         <input id="carType" placeholder="Enter Car"><br>
@@ -152,7 +152,7 @@
                         <input id="timeOfDepart" placeholder="Time of Departure"><br>
                     </fieldset>
                     <button type="submit" id="submitEventBtn">Submit</button>
-                </div>
+                </form>
 
     </div>
 
