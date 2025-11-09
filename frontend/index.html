@@ -20,26 +20,26 @@
     <div class="container">
         <div>
             <h1 class="app_title">
-                <div class="inlineTitle">AntPile
+                <div class="inlineTitle">ASWS
                     <div class="imageContainer">
-                        <img src="https://i.redd.it/rgfi4exvjiq11.png" height="50px">
-                        <img src="https://freesvg.org/img/nicubunu_Toy_car.png" height="50px">
+                        <img id="petrImage" src="https://i.redd.it/rgfi4exvjiq11.png">
+                        <img id="carImage" src="https://freesvg.org/img/nicubunu_Toy_car.png">
                     </div>
                 </div>
 
                 <div class="headerstuff">
-                    <form id="usercreator" target="/users">
-                        <input id="userField" placeholder="Enter Username" />
-                        <input id="emailField" placeholder="Enter Email" />
+                    <form id="usercreator" action="/users/create/" method="POST">
+                        <input name="username" placeholder="Enter Username" />
+                        <input name="email" placeholder="Enter Email" />
                         <button type="submit" id="loginButton">Login</button>
                     </form>
                 </div>
             </h1>
         </div>
         <div>
-            <p class="centerTitle">AntPile</p>
+            <p class="centerTitle">AntStopWontStop</p>
             <div class="subCenterTitle">
-                <a href="#eventcreator" class="SelectionButton">Start Ride</a>
+                <a href="#startride" class="SelectionButton">Start Ride</a>
                 <a href="#eventcontainstart" class="SelectionButton">Join Ride</a>
             </div>
         </div>
@@ -55,180 +55,124 @@
         <table>
             <tr>
                 <td>
-                    <div>
-                        <div class="eventcontainer" id="eventContainer">
-                            Event:<p id="eventname1"> </p>
-                            Destination: <p id="eventdest1"></p>
-                            Departure Time: <p id="departtime1"></p>
-                            Number of Remaining Seats: <p id="seatsrem1"></p>
-                            <div class="buttonhold"><button id="joinbut1" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div>
-                                </div>
-                            </div>
+                    <div class="eventcontainer" id="eventContainer">
+                        Event:<p id="event1"> </p>
+                        <div class="buttonhold"><button id="joinbut1" type="button" class="joinbutton">Join
+                                Trip</button>
+                        </div>
+                    </div>
                 </td>
                 <td>
-                    <div>
-                        <div class="eventcontainer">
-                            Event:<p id="eventname2"> </p>
-                            Destination: <p id="eventdest2"></p>
-                            Departure Time: <p id="departtime2"></p>
-                            Number of Remaining Seats: <p id="seatsrem2"></p>
-                            <div class="buttonhold"><button id="joinbut2" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div></div>
-                            </div>
+                    <div class="eventcontainer">
+                        Event:<p id="event2"> </p>
+                        <div class="buttonhold"><button id="joinbut2" type="button" class="joinbutton">Join
+                                Trip</button>
                         </div>
+                    </div>
                 </td>
                 <td>
-                    <div>
-                        <div class="eventcontainer">
-                            Event:<p id="eventname3"> </p>
-                            Destination: <p id="eventdest3"></p>
-                            Departure Time: <p id="departtime3"></p>
-                            Number of Remaining Seats: <p id="seatsrem3"></p>
-                            <div class="buttonhold"><button id="joinbut3" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div></div>
-                            </div>
+                    <div class="eventcontainer">
+                        Event:<p id="event3"> </p>
+                        <div class="buttonhold"><button id="joinbut3" type="button" class="joinbutton">Join
+                                Trip</button>
                         </div>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div>
-                        <div class="eventcontainer">
-                            Event:<p id="eventname4"> </p>
-                            Destination: <p id="eventdest4"></p>
-                            Departure Time: <p id="departtime4"></p>
-                            Number of Remaining Seats: <p id="seatsrem4"></p>
-                            <div class="buttonhold"><button id="joinbut4" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div></div>
-                            </div>
+                    <div class="eventcontainer">
+                        Event:<p id="event4"> </p>
+                        <div class="buttonhold"><button id="joinbut4" type="button" class="joinbutton">Join
+                                Trip</button>
                         </div>
+                    </div>
                 </td>
                 <td>
-                    <div>
-                        <div class="eventcontainer">
-                            Event:<p id="eventname5"> </p>
-                            Destination: <p id="eventdest5"></p>
-                            Departure Time: <p id="departtime5"></p>
-                            Number of Remaining Seats: <p id="seatsrem5"></p>
-                            <div class="buttonhold"><button id="joinbut5" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div></div>
-                            </div>
+                    <div class="eventcontainer">
+                        Event:<p id="event5"> </p>
+                        <div class="buttonhold"><button id="joinbut5" type="button" class="joinbutton">Join
+                                Trip</button>
                         </div>
+                    </div>
                 </td>
                 <td>
-                    <div>
-                        <div class="eventcontainer">
-                            Event:<p id="eventname6"> </p>
-                            Destination: <p id="eventdest6"></p>
-                            Departure Time: <p id="departtime6"></p>
-                            Number of Remaining Seats: <p id="seatsrem6"></p>
-                            <div class="buttonhold"><button id="joinbut6" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div></div>
-                            </div>
+                    <div class="eventcontainer">
+                        Event:<p id="event6"> </p>
+                        <div class="buttonhold"><button id="joinbut6" type="button" class="joinbutton">Join
+                                Trip</button>
                         </div>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div>
-                        <div class="eventcontainer">
-                            Event:<p id="eventname7"> </p>
-                            Destination: <p id="eventdest7"></p>
-                            Departure Time: <p id="departtime7"></p>
-                            Number of Remaining Seats: <p id="seatsrem7"></p>
-                            <div class="buttonhold"><button id="joinbut7" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div></div>
-                            </div>
+                    <div class="eventcontainer">
+                        Event:<p id="event7"> </p>
+                        <div class="buttonhold"><button id="joinbut7" type="button" class="joinbutton">Join
+                                Trip</button>
                         </div>
+                    </div>
                 </td>
                 <td>
-                    <div>
-                        <div class="eventcontainer">
-                            Event:<p id="eventname8"> </p>
-                            Destination: <p id="eventdest8"></p>
-                            Departure Time: <p id="departtime8"></p>
-                            Number of Remaining Seats: <p id="seatsrem8"></p>
-                            <div class="buttonhold"><button id="joinbut8" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div></div>
-                            </div>
+                    <div class="eventcontainer">
+                        Event:<p id="event8"> </p>
+                        <div class="buttonhold"><button id="joinbut8" type="button" class="joinbutton">Join
+                                Trip</button>
                         </div>
+                    </div>
                 </td>
                 <td>
-                    <div>
-                        <div class="eventcontainer">
-                            Event:<p id="eventname9"> </p>
-                            Destination: <p id="eventdest9"></p>
-                            Departure Time: <p id="departtime9"></p>
-                            Number of Remaining Seats: <p id="seatsrem9"></p>
-                            <div class="buttonhold"><button id="joinbut9" type="button" class="joinbutton">Join
-                                    Trip</button>
-                                <div></div>
-                            </div>
+                    <div class="eventcontainer">
+                        Event:<p id="event9">
+                            Driver Name:
+                            Destination:
+                            Departure Time:
+                            Number of Remaining Seats:
+                            Participants:
+                        </p>
+                        <div class="buttonhold"><button id="joinbut9" type="button" class="joinbutton">Join
+                                Trip</button>
                         </div>
+                    </div>
                 </td>
             </tr>
         </table>
+        <div class="buttoncontainer"><button type="button" class="navbutton" id="prev">Previous</button>
+            <button type="button" class="navbutton" id="next">Next</button>
+        </div>
+        <div class="line"></div>
+        <div>
+            <p id="startride" class="subCenterTitle">Start Ride</p>
+        </div>
 
         <!--This is place to create event-->
-
-        <div class="eventCreator_background">
-            
-            <form id="eventcreator" target="/users/events">
-                <fieldset>
-                    <legend id="legend1">Event Creator</legend>
-                    <input id="carType" class='eventCreator_button' placeholder="Enter Car"><br>
-                    <input id="destination" class='eventCreator_button' placeholder="Enter Destination"><br>
-                    <input id="numOfSeats" class='eventCreator_button' placeholder="Num of Passengers"><br>
-                    <input id="timeOfDepart" class='eventCreator_button' placeholder="Time of Departure"><br>
-                </fieldset>
-                <button type="submit" id="submitEventBtn">Submit</button>
-            </form>
-
-            <img src="https://images.squarespace-cdn.com/content/v1/5b60d4fa70e802968763e7f5/1604445857190-QC094PAQWZM7OBHH7VHP/FJG-UCI-3825_72.jpg?format=2500w" class="eventCreator_image">
-            
-        </div>
+        <form id="eventcreator" class="eventCreator_background" action="/event/makeevent/" method="POST">
+            <fieldset>
+                <legend>Event Creator</legend>
+                <input name="eventname" placeholder="Enter Car"><br>
+                <input name="destination" placeholder="Enter Destination"><br>
+                <input name="capacity" placeholder="Num of Passengers"><br>
+                <input name="time" placeholder="Time of Departure"><br>
+            </fieldset>
+            <button type="submit" id="submitEventBtn">Submit</button>
+        </form>
+        <img src="https://images.squarespace-cdn.com/content/v1/5b60d4fa70e802968763e7f5/1604445857190-QC094PAQWZM7OBHH7VHP/FJG-UCI-3825_72.jpg?format=2500w" class="eventCreator_image">
 
 
         <div class="ZotGPT">
             <h1 style="font-size:70px; text-align:center; padding-top:65px">AntPile Bot</h1>
-            <p style="padding-top:20px; font-size: 30px; text-align:center;">Want to find out where is the nearest pick-up spot? Ask Peter the ride bot!</p>
-            <a href="https://creator.zotgpt.uci.edu/mychatbots/fT7F7jLVbldcmKhUazHsAoJg7pk5fUfNl6DX/chat" class="ZotGPT_askpeter"> Ask Peter -></a>
-            <img src="/Users/sophieee/Documents/Documents/University/Projects/zothacks25-1/frontend/peter.png" style="float:right; margin-right:80px; margin-top:25px" height="400px">
+            <p style="padding-top:20px; font-size: 30px; text-align:center;">Want to find out where is the nearest
+                pick-up spot? Ask Peter the ride bot!</p>
+            <a href="https://creator.zotgpt.uci.edu/mychatbots/fT7F7jLVbldcmKhUazHsAoJg7pk5fUfNl6DX/chat"
+                class="ZotGPT_askpeter"> Ask Peter -></a>
+            <img src="./peter.png" style="float:right; margin-right:80px; margin-top:25px" height="400px">
 
 
         </div>
-
-
-
-
-
     </div>
-
-
-
-
-
-
     <!-- Load scripts at the end of your HTML to make pages load faster! -->
     <script src="script.js"></script>
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

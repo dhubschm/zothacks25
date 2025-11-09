@@ -1,42 +1,53 @@
-//import React from "react";
+function updateEventPreview(containerElement, data) {
+    textElement = containerElement.querySelector('pre');
+    //text = `Event: ${data.EventName}\nDriver Name: ${data.Host.UserInfo.Username}\nDestination: ${data.Time}\nDeparture Time: ${data.Location}\nNumber of Remaining Seats: ${data.Capacity}\nParticipants:${data.Attendees}`;
+    pText = '';
+    for (participant of data.Attendees) {
+        pText += `${participant.Username}: ${participant.Email};`
+    }
+    
+    text = `
+    Event: ${data.EventName}
+    Departure Time: ${data.Location}
+    Destination: ${data.Time}
+    Number of Remaining Seats: ${data.Capacity}
+    Participants: ${pText}`;
 
-// ACCOUNT
-const username = document.querySelector("#userField");
-const email = document.querySelector("#emailField");
+    textElement.textContent = text;
+    buttonElement = containerElement.querySelector('button');
+    enableButton(buttonElement);
+}
 
-const loginSubmitBtn = document.querySelector("#loginButton");
+function enableButton(btn) {
+    btn.textContent = 'Join!';
+    btn.disabled = false;
+}
 
+function getEvents() {
+    const req = new XMLHttpRequest();
+    req.open("GET", "/events/");
+    req.addEventListener("load", displayEvents);
+    req.send(); 
+    return req;
+}
+// form issue 
+let i = 0;
+function displayEvents(event) {
+    eventJson = JSON.parse(event.target.response);
+    containers = document.querySelectorAll(".eventcontainer");
+    for (let i=0; i<Math.min(eventJson.length, containers.length); i++){
+        updateEventPreview(containers[i], eventJson[i]);
+    }
+}
+
+const loginSubmitBtn = document.querySelector("#submitEventBtn");
 loginSubmitBtn.addEventListener("click", function () {
-    loginSubmitBtn.textContent = "Logout";
+    // loginSubmitBtn = 0;
 });
-
-// DRIVER FORM
-const carType = document.querySelector("#carType");
-const destination = document.querySelector("#destination");
-const numOfSeats = document.querySelector("#numOfSeats");
-const time = document.querySelector("#timeOfDepart");
 
 const driverSubmitBtn = document.querySelector("#submitEventBtn");
 driverSubmitBtn.addEventListener("click", function () {
-    driverSubmitBtn.textContent = "Exit trip";
+    getEvents();
 });
 
-// GET PREV EVENTS (in progress)
-
-/*
-function updateEvents() {
-    const events = new XMLHttpRequest();
-    events.open("GET", "/users/events");
-    events.send();
-    console.log(events);
-}
-
-function createEventPreview() {
-    pass;
-}
-    */
-
-// For each class="eventcontainer", need to change eventnameX, eventdestX, departtimeX, seatsremX
-// Fetch event list from FastAPI in route "/users/events" (it has limit parameter)
-
-// Can also get specific event
+window.onload = getEvents;

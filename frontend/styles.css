@@ -12,6 +12,7 @@ table{
     transform: translateX(9%);
     width:80%;
     object-fit: contain;
+    margin-bottom: 10rem;
 }
 th,
 td {
@@ -114,6 +115,7 @@ a {
 }
 .imageContainer {
     margin-left: 15px;
+    display: grid;
 }
 
 .app_title {
@@ -196,9 +198,17 @@ fieldset {
 }
 
 
+.buttoncontainer{
+    transform:translateY(-75px);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .joinbutton {
+    margin-top: 15px;
     width: 80%;
-    background-color: #008cba;
+    background-color: grey;
     color: white;
     border-radius: 50px;
     margin-top: 180px;
@@ -251,8 +261,21 @@ fieldset {
 
 }
 
+.hidden{
+    display:none;
+}
 
 
+.navbutton {
+    background-color: grey;
+    color: whitesmoke;
+    font-weight:5px;
+    font-size: 20pt;
+    width:125px;
+    height:50px;
+    border-radius: 25px;
+    padding:3px;
+}
 .ZotGPT{
     background-color:rgb(255, 255, 255, 0.3);
     height:900px;
@@ -291,7 +314,6 @@ fieldset {
 
 .ZotGPT_askpeter:hover {
     transform: translateY(-2px);
-
 }
 
 /* You can target elements by id by preceding the id name with # */
@@ -304,8 +326,8 @@ fieldset {
 }
 
 #loginButton {
-    background-color: rgb(255, 255, 255);
-    color: black;
+    background-color: grey;
+    color: white;
     border-color: white;
     border-radius: 10px;
     height: 30px;
@@ -337,7 +359,6 @@ fieldset {
 
 #submitEventBtn:hover {
     background-color: #f1ba91; /* Darker green on hover */
-    font-color: rgb(0, 0, 0);
 }
 
 
@@ -352,7 +373,7 @@ a:hover{
     color:rgb(71, 95, 139);
 }
 #loginButton:hover {
-    background-color: rgb(96, 96, 96);
+    background-color: darkslategray;
     color: #ffffff;
     border-color: #008cba;
     border-radius: 10px;
@@ -360,9 +381,14 @@ a:hover{
 }
 
 .joinbutton:hover {
-    background-color: rgb(49, 110, 131);
+    background-color: darkslategray;
     color:white;
 
+}
+
+.navbutton:hover {
+    background-color: darkslategray;
+    color:white;
 }
 
 /*
@@ -380,6 +406,15 @@ a:hover{
     background-color: gray;
 }
 
+#petrImage {
+    height:50px;
+}
+
+#carImage {
+    height: 50px;
+    margin-left: -8px;
+    margin-top: -29px;
+}
 
 #content1 {
     background-color: lightcoral;
@@ -406,11 +441,7 @@ a:hover{
     More info: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 */
 
-#petr {
-    height: 10%;
-    width: 10%;
-    animation: spin 0.5s infinite;
-}
+
 
 @keyframes spin {
     0% {
@@ -420,4 +451,3 @@ a:hover{
         transform: rotate(360deg);
     }
 }
-
