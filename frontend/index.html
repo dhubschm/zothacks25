@@ -19,10 +19,10 @@
 <body>
     <div class="container">
         <div>
-            <h1 class="app_title"><div class="inlineTitle">AntPile
+            <h1 class="app_title"><div class="inlineTitle">AntStopWontStop
                     <div class="imageContainer">
-                    <img src="https://i.redd.it/rgfi4exvjiq11.png" height="50px">
-                    <img src="https://freesvg.org/img/nicubunu_Toy_car.png" height="50px"></div></div>
+                    <img id="petrImage" src="https://i.redd.it/rgfi4exvjiq11.png">
+                    <img id="carImage" src="https://freesvg.org/img/nicubunu_Toy_car.png"></div></div>
                 
                 <div class="headerstuff">
                     <form id="usercreator" target="/users">
@@ -35,9 +35,9 @@
             <div class="line"></div>
         </div>
         <div>
-            <p class="centerTitle">AntPile</p>
+            <p class="centerTitle">AntStopWontStop</p>
             <div class="subCenterTitle">
-                <a href="#eventcreator">Start Ride</a>
+                <a href="#startride">Start Ride</a>
                 <a href="#eventcontainstart">Join Ride</a>
             </div>
         </div>
@@ -153,8 +153,11 @@
                 </td>
             </tr>
             <table>
+            <div class="buttoncontainer"><button type="button"class="navbutton"id="prev">Previous</button>
+            <button type="button"class="navbutton"id="next">Next</button></div>
+            <div class="line"></div>
+            <div><p id="startride" class="subCenterTitle">Start Ride</p></div>
 
-            
                 <!--This is place to create event-->
                 <form id="eventcreator" target="/users/events">
                     <fieldset>

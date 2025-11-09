@@ -12,6 +12,7 @@ table{
     transform: translateX(9%);
     width:80%;
     object-fit: contain;
+    margin-bottom: 10rem;
 }
 th,
 td {
@@ -64,6 +65,7 @@ a {
 }
 .imageContainer {
     margin-left: 15px;
+    display: grid;
 }
 
 .app_title {
@@ -131,6 +133,13 @@ fieldset {
     
 }
 
+.buttoncontainer{
+    transform:translateY(-75px);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .joinbutton {
     width: 80%;
     background-color: #008cba;
@@ -180,6 +189,17 @@ fieldset {
 
 }
 
+.navbutton {
+    background-color: grey;
+    color: whitesmoke;
+    font-weight:5px;
+    font-size: 20pt;
+    width:125px;
+    height:50px;
+    border-radius: 25px;
+    padding:3px;
+}
+
 /* You can target elements by id by preceding the id name with # */
 #greeting {
     color: darkblue;
@@ -198,9 +218,6 @@ fieldset {
     width: 50px;
     transition-duration: 0.4s;
     margin-right: 20px;
-    margin-right: 20px;
-    margin-bottom: 70px;
-    margin-top: 70px;
 
 }
 
@@ -253,6 +270,7 @@ a:hover{
 
 }
 
+
 /*
     Feel free to mess around with the padding, border and margin here
     to see how the content is affected. You may notice the content's
@@ -268,6 +286,15 @@ a:hover{
     background-color: gray;
 }
 
+#petrImage {
+    height:50px;
+}
+
+#carImage {
+    height: 50px;
+    margin-left: -8px;
+    margin-top: -29px;
+}
 
 #content1 {
     background-color: lightcoral;
@@ -294,11 +321,7 @@ a:hover{
     More info: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 */
 
-#petr {
-    height: 10%;
-    width: 10%;
-    animation: spin 0.5s infinite;
-}
+
 
 @keyframes spin {
     0% {
