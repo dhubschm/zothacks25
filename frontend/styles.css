@@ -56,6 +56,7 @@ a {
     display: flex;
     justify-content: space-around;
     margin-bottom: 10rem;
+    font-size: 50pt;
 }
 
 
@@ -83,6 +84,18 @@ a {
     border: solid;
     padding: 10px;
     width: 250px;
+}
+
+.joinbutton {
+    width: 80%;
+    background-color: #008cba;
+    color: white;
+    border-radius: 50px;
+}
+
+.buttonhold{
+    display: flex;
+    justify-content: center;
 }
 
 .bckg{
@@ -154,6 +167,12 @@ a:hover{
     border-color: #008cba;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.joinbutton:hover {
+    background-color: rgb(49, 110, 131);
+    color:white;
+
 }
 
 /*
