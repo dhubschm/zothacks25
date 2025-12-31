@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Load CSS and JS files -->
+    <!-- 
+        Load your custom scripts!
+        These can retrieve and send data for the frontend,
+        as well as change the way the website looks!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <div class="bckg">
+        <title>My App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="app_title">
+                <div class="inlineTitle">ASWS
+                    <div class="imageContainer">
+                        <img id="petrImage" src="https://i.redd.it/rgfi4exvjiq11.png">
+                        <img id="carImage" src="https://freesvg.org/img/nicubunu_Toy_car.png">
+                    </div>
+                </div>
+
+                <div class="headerstuff">
+                    <form id="usercreator" action="/users/create/" method="POST">
+                        <input name="username" placeholder="Enter Username" />
+                        <input name="email" placeholder="Enter Email" />
+                        <button type="submit" id="loginButton">Login</button>
+                    </form>
+                </div>
+            </h1>
+        </div>
+        <div>
+            <p class="centerTitle">AntStopWontStop</p>
+            <div class="subCenterTitle">
+                <a href="#eventcreator" class="SelectionButton">Start Ride</a>
+                <a href="#eventcontainstart" class="SelectionButton">Join Ride</a>
+            </div>
+        </div>
+        <div class="firstline" id="eventcontainstart"></div>
+
+        <div>
+            <p class="subCenterTitle">Join Ride</p>
+        </div>
+
+        <!--This is the event container-->
+        <table>
+            <tr>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="eventcontainer">
+                        <div class="event-info-wrapper">
+                            <div class="detail-row"><span class="detail-label">🚙Car Description:</span></div>
+                            <div class="detail-row"><span class="detail-label">🗺️Destination:</span></div>
+                            <div class="detail-row"><span class="detail-label">🕒Departure Time:</span></div>
+                            <div class="detail-row"><span class="detail-label">💺Remaining Seats:</span></div>
+                            <div class="participants-box"><strong>Participants:</strong></div>
+                        </div> 
+                        
+                        <div class="buttonhold">
+                            <button type="button" class="joinbutton">Join Trip</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <!--This is place to create event-->
+
+        <div class="eventCreator_background">
+            <form id="eventcreator" action="/event/makeevent/" method="POST">
+                <fieldset>
+                    <legend>Event Creator</legend>
+                    <input name="car_description" class='eventCreator_button'placeholder="Enter Car Description"><br>
+                    <input name="destination" class='eventCreator_button' placeholder="Enter Destination"><br>
+                    <input name="capacity" class='eventCreator_button' placeholder="Enter Number of Seats" type="number"><br>
+                    <input name="time" class='eventCreator_button' placeholder="Enter Departure Time"><br>
+                </fieldset>
+                <button type="submit" id="submitEventBtn">Submit</button>
+            </form>
+            
+            <img src="https://images.squarespace-cdn.com/content/v1/5b60d4fa70e802968763e7f5/1604445857190-QC094PAQWZM7OBHH7VHP/FJG-UCI-3825_72.jpg?format=2500w" class="eventCreator_image">
+        </div>
+
+
+        <div class="ZotGPT">
+            <h1 style="font-size:70px; text-align:center; padding-top:65px">AntPile Bot</h1>
+            <p style="padding-top:20px; font-size: 30px; text-align:center;">Want to find out where is the nearest
+                pick-up spot? Ask Peter the ride bot!</p>
+            <a href="https://creator.zotgpt.uci.edu/mychatbots/fT7F7jLVbldcmKhUazHsAoJg7pk5fUfNl6DX/chat"
+                class="ZotGPT_askpeter"> Ask Peter -></a>
+            <img src="./peter.png" style="float:right; margin-right:80px; margin-top:25px" height="400px">
+
+
+        </div>
+    </div>
+    <!-- Load scripts at the end of your HTML to make pages load faster! -->
+    <script src="script.js"></script>
+</body>
+
+</html>
