@@ -1,11 +1,13 @@
 from fastapi import FastAPI, HTTPException, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import List
 from typing import Annotated
 
 import json
+import os
 
 app = FastAPI()
 
@@ -80,3 +82,7 @@ def get_top_event():
             event.model_dump(mode='json', warnings=False)
         )
     return events
+
+@app.get("/")
+async def read_index():
+    return FileResponse("../frontend/index.html")
